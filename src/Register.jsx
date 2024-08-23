@@ -28,7 +28,7 @@ const Registration = () => {
       // Redirect based on userType
     //   if (response.data.role === 'seller') {
     //     // history.push('/seller/dashboard');
-        navigate('https://epic-forge-backend.onrender.com/auth/login', { replace: true });
+        navigate('/auth/login', { replace: true });
 
     //   } else {
     //     // history.push('/buyer/products');

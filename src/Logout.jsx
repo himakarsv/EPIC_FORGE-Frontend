@@ -1,9 +1,11 @@
 import React from 'react'
-
+import { useNavigate } from 'react-router-dom';
 export default function Logout() {
+  const navigate = useNavigate();
     const handleClick=()=>{
         localStorage.removeItem('token');
-        window.location.href = 'https://epic-forge-backend.onrender.com/auth/login';
+        navigate('auth/login');
+        // window.location.href = 'https://epic-forge-backend.onrender.com/auth/login';
     }
   return (
     <>
