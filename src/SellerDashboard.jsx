@@ -13,7 +13,7 @@ const SellerDashboard = () => {
     // Fetch products for this seller
     const fetchProducts = async () => {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:3000/seller/products', {
+      const response = await axios.get('https://epic-forge-backend.onrender.com/seller/products', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProducts(response.data);
@@ -24,7 +24,7 @@ const SellerDashboard = () => {
   const fetchSalesOrders = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:3000/seller/orders', {
+      const response = await axios.get('https://epic-forge-backend.onrender.com/seller/orders', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSalesOrders(response.data);

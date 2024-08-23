@@ -14,7 +14,7 @@ import Logout from './Logout';
 //     const fetchProducts = async () => {
 //       try {
 //         const token = localStorage.getItem('token');
-//         const response = await axios.get('http://localhost:3000/buyer/products', {
+//         const response = await axios.get('https://epic-forge-backend.onrender.com0/buyer/products', {
 //             headers: { Authorization: `Bearer ${token}` }
 //           });
 //         setProducts(response.data);
@@ -36,7 +36,7 @@ import Logout from './Logout';
 // const handleAddToWishlist = async (productId) => {
 //     try {
 //       const token = localStorage.getItem('token');
-//       await axios.post(`http://localhost:3000/buyer/addtoWishlist/${productId}`, {}, {
+//       await axios.post(`https://epic-forge-backend.onrender.com0/buyer/addtoWishlist/${productId}`, {}, {
 //         headers: { Authorization: `Bearer ${token}` }
 //       });
 //     //   setWishlist([...wishlist,product]);
@@ -49,7 +49,7 @@ import Logout from './Logout';
 //   const handleViewWishlist = async () => {
 //     try {
 //       const token = localStorage.getItem('token');
-//       const response = await axios.get('http://localhost:3000/buyer/viewwishlist', {
+//       const response = await axios.get('https://epic-forge-backend.onrender.com0/buyer/viewwishlist', {
 //         headers: { Authorization: `Bearer ${token}` }
 //       });
 //       setWishlist(response.data);  // Set the fetched wishlist
@@ -146,7 +146,7 @@ const BuyerDashboard = () => {
         const fetchProducts = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:3000/buyer/products', {
+                const response = await axios.get('https://epic-forge-backend.onrender.com/buyer/products', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setProducts(response.data);
@@ -163,7 +163,7 @@ const BuyerDashboard = () => {
     const handleAddToWishlist = async (productId) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.post(`http://localhost:3000/buyer/addtoWishlist/${productId}`, {}, {
+            await axios.post(`https://epic-forge-backend.onrender.com/buyer/addtoWishlist/${productId}`, {}, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             console.log('Product added to wishlist');
@@ -177,7 +177,7 @@ const BuyerDashboard = () => {
         try {
           const token = localStorage.getItem('token');
           await axios.post(
-            'http://localhost:3000/buyer/placeOrder',
+            'https://epic-forge-backend.onrender.com/buyer/placeOrder',
             { productId, quantity: 1 }, // You can modify the quantity dynamically if needed
             { headers: { Authorization: `Bearer ${token}` } }
           );
@@ -190,7 +190,7 @@ const BuyerDashboard = () => {
       const fetchOrders = async () => {
         try {
           const token = localStorage.getItem('token');
-          const response = await axios.get('http://localhost:3000/buyer/orders', {
+          const response = await axios.get('https://epic-forge-backend.onrender.com/buyer/orders', {
             headers: { Authorization: `Bearer ${token}` }
           });
           setOrders(response.data);
@@ -207,7 +207,7 @@ const BuyerDashboard = () => {
     const handleViewWishlist = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await axios.get('http://localhost:3000/buyer/viewwishlist', {
+            const response = await axios.get('https://epic-forge-backend.onrender.com/buyer/viewwishlist', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setWishlist(response.data);  // Set the fetched wishlist

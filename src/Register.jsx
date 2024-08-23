@@ -13,7 +13,7 @@ const Registration = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/auth/register', {
+      const response = await axios.post('https://epic-forge-backend.onrender.com/auth/register', {
         username,
         email,
         password,

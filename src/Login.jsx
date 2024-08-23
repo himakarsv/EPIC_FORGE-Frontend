@@ -12,7 +12,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/auth/login', { email, password ,role});
+      const response = await axios.post('https://epic-forge-backend.onrender.com/auth/login', { email, password ,role});
       console.log("Login successfull");
 
       // After a successful login, store the token and role in localStorage

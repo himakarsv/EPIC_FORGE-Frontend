@@ -8,7 +8,7 @@ const SalesSidebar = () => {
     // Fetch sales orders for this seller
     const fetchSales = async () => {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:3000/api/seller/sales', {
+      const response = await axios.get('https://epic-forge-backend.onrender.com/api/seller/sales', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSales(response.data);

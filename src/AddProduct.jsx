@@ -16,7 +16,7 @@ const AddProduct = ({ setProducts }) => {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/seller/addProduct',
+        'https://epic-forge-backend.onrender.com/seller/addProduct',
         {
           name,
           color,

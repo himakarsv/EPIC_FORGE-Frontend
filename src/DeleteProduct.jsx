@@ -6,7 +6,7 @@ const DeleteProduct = ({ productId, setProducts }) => {
     const token = localStorage.getItem('token');
 
     try {
-      await axios.delete(`http://localhost:3000/seller/deleteProduct/${productId}`, {
+      await axios.delete(`https://epic-forge-backend.onrender.com/seller/deleteProduct/${productId}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProducts((prev) => prev.filter((p) => p._id !== productId));

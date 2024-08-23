@@ -11,7 +11,7 @@ const EditProduct = ({ product, setProducts, closeEdit }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/seller/editProduct/${product._id}`,
+        `https://epic-forge-backend.onrender.com/seller/editProduct/${product._id}`,
         { name, price },
         {
           headers: { Authorization: `Bearer ${token}` },
