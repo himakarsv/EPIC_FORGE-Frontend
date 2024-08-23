@@ -4,7 +4,7 @@ export default function Logout() {
   const navigate = useNavigate();
     const handleClick=()=>{
         localStorage.removeItem('token');
-        navigate('auth/login',{ replace: true });
+        navigate('/auth/login',{ replace: true });
         // window.location.href = 'https://epic-forge-backend.onrender.com/auth/login';
     }
   return (
